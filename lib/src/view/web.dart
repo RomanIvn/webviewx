@@ -244,7 +244,7 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
 
         // NOTE: MAY HAVE UNDESIRED BEHAVIOUR
         print("IM HEEEEEEEEEEERE");
-        print(iframe.srcdoc);
+        print(iframe.innerHtml);
         
         if (webViewXController.value.sourceType == SourceType.URL_BYPASS) {
           // ignore: unsafe_html
