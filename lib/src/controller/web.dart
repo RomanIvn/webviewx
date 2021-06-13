@@ -20,7 +20,7 @@ class WebViewXController extends ValueNotifier<ViewContentModel> {
   // First entry is the current url, last entry is the initial url
   final HistoryStack _history;
 
-  bool printDebugInfo = false;
+  bool printDebugInfo = true;
 
   /// Constructor
   WebViewXController({
