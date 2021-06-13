@@ -243,9 +243,13 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
         // Only when the source was set from inside itself (load function, on click)
 
         // NOTE: MAY HAVE UNDESIRED BEHAVIOUR
-        print("IM HEEEEEEEEEEERE");
+        print("IM HEEEEEEEEEEERE1");
+        print(iframe.contentDocument.body);
+        print("IM HEEEEEEEEEEER2");        
         print(iframe.innerHtml);
-        
+        print("IM HEEEEEEEEEEERE3");
+
+
         if (webViewXController.value.sourceType == SourceType.URL_BYPASS) {
           // ignore: unsafe_html
           iframe.srcdoc = HtmlUtils.preprocessSource(
