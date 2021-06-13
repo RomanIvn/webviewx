@@ -244,10 +244,8 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
 
         // NOTE: MAY HAVE UNDESIRED BEHAVIOUR
         print("IM HEEEEEEEEEEERE1");
-        print(iframe.contentDocument.body);
+        print(iframe.contentWindow.addEventListener("test", (event){print("test recieved")}));
         print("IM HEEEEEEEEEEER2");        
-        print(iframe.innerHtml);
-        print("IM HEEEEEEEEEEERE3");
 
 
         if (webViewXController.value.sourceType == SourceType.URL_BYPASS) {
