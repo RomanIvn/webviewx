@@ -243,6 +243,7 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
         // Only when the source was set from inside itself (load function, on click)
 
         // NOTE: MAY HAVE UNDESIRED BEHAVIOUR
+        print("IM HEEEEEEEEEEERE");
 
         if (webViewXController.value.sourceType == SourceType.URL_BYPASS) {
           // ignore: unsafe_html
@@ -376,6 +377,9 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
   // add the connector to the controller (connector that
   // allows you to call JS methods)
   void _handleChange() {
+    
+    print("SOMETHING CHANGED!");
+    
     final newContentModel = webViewXController.value;
 
     switch (newContentModel.sourceType) {
@@ -390,6 +394,7 @@ class _WebViewXWidgetState extends State<WebViewXWidget> {
         }
         break;
       case SourceType.URL_BYPASS:
+        
         _connectJsToFlutter();
         break;
       default:
